@@ -365,7 +365,7 @@ main {
   height: 100vh;
   padding: 100px 50px;
   display: flex;
-  background-color: #f9f6f3;
+  background-color: #000000;
   color: #c8ab7c;
 }
 .Contact h1 {
@@ -442,7 +442,7 @@ main {
   position: absolute;
   right: -20px;
   top: 20%;
-  background-color: #f9f6f3;
+  background-color: #000000;
   width: 60%;
   height: 60%;
 }
