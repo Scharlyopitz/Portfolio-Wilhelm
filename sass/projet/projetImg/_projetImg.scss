@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $Creme;
+  background-color: $BackGround;
 
   .ProjetTitlImg {
     display: flex;
@@ -12,7 +12,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 145vh;
-    color: $CremDark;
+    color: $Gold;
   }
 
   h1 {
