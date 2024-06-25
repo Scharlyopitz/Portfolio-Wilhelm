@@ -352,6 +352,7 @@ main {
   position: absolute;
 }
 .ProjetVideoContainer .videosContainer img {
+  width: 11.5vh;
   height: 6vh;
   -o-object-fit: cover;
      object-fit: cover;
@@ -426,6 +427,7 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  filter: grayscale(1);
 }
 .Contact .leftPart .bigPhoto {
   position: relative;
