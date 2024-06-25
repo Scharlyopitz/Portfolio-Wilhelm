@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f9f6f3;
+  overflow-x: hidden;
+}
+body,
+body button {
+  font-family: "Cormorant", serif;
+}
+body a {
+  text-decoration: none;
+}
+
+main {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+::-moz-selection {
+  background-color: #ba9b60;
+  color: #ffffff;
+}
+
+::selection {
+  background-color: #ba9b60;
+  color: #ffffff;
+}
+
+.backBtn {
+  position: absolute;
+  font-size: 3vh;
+  font-style: italic;
+  z-index: 5;
+  color: #ba9b60;
+  cursor: pointer;
+}
+.backBtn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  height: 0.5px;
+  background-color: #ba9b60;
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+.backBtn:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.Home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.HomeTxtContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c8ab7c;
+}
+.HomeTxtContainer .letters {
+  letter-spacing: -6px;
+  font-size: 9vh;
+  line-height: 145%;
+  display: flex;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+.HomeTxtContainer .letters:nth-child(1) {
+  margin-left: -30%;
+}
+.HomeTxtContainer .letters:nth-child(3) {
+  position: relative;
+  margin-left: 13%;
+}
+.HomeTxtContainer .letters h1 {
+  font-weight: 100;
+}
+.HomeTxtContainer a {
+  font-style: italic;
+  color: #c8ab7c;
+  position: absolute;
+  top: 17px;
+  right: 77px;
+  border: none;
+  background: none;
+  font-size: 3vh;
+}
+.HomeTxtContainer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.HomeTxtContainer a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  width: 100%;
+  height: 1px;
+  background-color: #c8ab7c;
+  transition: transform 0.5s;
+}
+
+.Sommaire {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ece6dc;
+  text-transform: uppercase;
+}
+.Sommaire .linksContainer {
+  display: flex;
+  flex-direction: column;
+  width: 110vh;
+}
+.Sommaire .linksContainer .link {
+  justify-content: center;
+}
+.Sommaire .linksContainer .link, .Sommaire .linksContainer .linkCate {
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+}
+.Sommaire .linksContainer .linkCate {
+  justify-content: flex-start;
+}
+.Sommaire .linksContainer .linkCate:nth-child(even) {
+  justify-content: flex-end;
+}
+.Sommaire .linksContainer a {
+  color: #d3c3ab;
+}
+.Sommaire .linksContainer a:hover {
+  color: #c8ab7c;
+}
+.SommaireTxtContainer {
+  display: flex;
+}
+.SommaireTxtContainer span {
+  font-style: italic;
+  font-size: 3vh;
+}
+.Sommaire h1 {
+  font-weight: 400;
+  font-size: 15vh;
+  letter-spacing: -5px;
+  line-height: 80%;
+}
+
+.ProjetImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ece6dc;
+}
+.ProjetImg .ProjetTitlImg {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 145vh;
+  color: #d3c3ab;
+}
+.ProjetImg h1 {
+  text-transform: uppercase;
+  font-size: 15vh;
+  font-weight: 500;
+}
+.ProjetImgContainer {
+  position: relative;
+  width: 60vh;
+  height: 80vh;
+}
+.ProjetImgContainer .MaxNumber {
+  font-style: italic;
+  position: absolute;
+  font-size: 10vh;
+  color: #ba9b60;
+  bottom: -10px;
+  right: -130px;
+}
+.ProjetImgContainer img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.ProjetImg .backBtn {
+  top: 25%;
+  left: -180px;
+}
+
+.ProjetImgContainer button {
+  position: absolute;
+  font-size: 3vh;
+  font-style: italic;
+  z-index: 5;
+  bottom: 30%;
+  left: -116px;
+  background: none;
+  border: none;
+  color: #ba9b60;
+  cursor: pointer;
+  outline: none;
+}
+.ProjetImgContainer button:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.ProjetImgContainer button:nth-child(even) {
+  bottom: 63%;
+  left: 106%;
+}
+.ProjetImgContainer button:nth-child(even)::after {
+  height: 0.5px;
+}
+.ProjetImgContainer button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  background-color: #ba9b60;
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+.numberContainer {
+  position: absolute;
+  font-size: 10vh;
+  color: #ba9b60;
+  top: -45px;
+  left: -120px;
+  display: flex;
+}
+.numberContainer .nums1 {
+  text-align: end;
+}
+.numberContainer .nums1,
+.numberContainer .nums2 {
+  font-style: italic;
+  height: 12vh;
+  overflow: hidden;
+}
+.numberContainer .nums1 .transition,
+.numberContainer .nums2 .transition {
+  transition: 0.5s;
+}
+
+.ProjetVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ProjetVideo .bg {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #f3efeb;
+}
+.ProjetVideo .ProjetTitlVideo {
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 145vh;
+  color: #c8ab7c;
+}
+.ProjetVideo h1 {
+  text-transform: uppercase;
+  font-size: 15vh;
+  font-weight: 500;
+}
+.ProjetVideo .bigVideos {
+  position: absolute;
+  display: flex;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+}
+.ProjetVideo .bigVideos img {
+  width: 90vh;
+  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 50vh;
+}
+.ProjetVideo .bigVideos img:last-child {
+  margin-bottom: 25vh;
+}
+.ProjetVideo .ProjectNumbers {
+  position: fixed;
+  color: #ff9b78;
+  mix-blend-mode: difference;
+}
+.ProjetVideo .backBtn {
+  position: fixed;
+  top: 60px;
+  left: 75px;
+}
+
+.ProjetVideoContainer .videosContainer {
+  position: fixed;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 65vh;
+  padding: 6px 0;
+}
+.ProjetVideoContainer .videosContainer .cadre {
+  height: calc(6vh + 12px);
+  width: calc(100% + 12px);
+  border: 1px solid #c8ab7c;
+  top: 0;
+  left: -6px;
+  position: absolute;
+}
+.ProjetVideoContainer .videosContainer img {
+  height: 6vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  pointer-events: none;
+}
+
+.Contact {
+  height: 100vh;
+  padding: 100px 50px;
+  display: flex;
+  background-color: #f9f6f3;
+  color: #c8ab7c;
+}
+.Contact h1 {
+  line-height: 0.7;
+  margin-bottom: 60px;
+  font-size: 13vh;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+.Contact span {
+  color: #c8ab7c;
+}
+.Contact label {
+  font-size: 5vh;
+}
+.Contact textarea {
+  flex-grow: 1;
+}
+.Contact .message {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+.Contact .message,
+.Contact input,
+.Contact textarea {
+  font-size: 2vh;
+  font-family: "Lexend Deca";
+  font-weight: 200;
+}
+.Contact input,
+.Contact textarea {
+  position: relative;
+  color: #c8ab7c;
+  outline: none;
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgba(200, 171, 124, 0.3803921569);
+  transition: border-bottom 0.5s;
+  resize: none;
+  margin-bottom: 25px;
+  padding: 10px 0;
+}
+.Contact input:focus,
+.Contact textarea:focus {
+  border-bottom: 2px solid #c8ab7c;
+}
+.Contact .leftPart {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Contact .leftPart img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Contact .leftPart .bigPhoto {
+  position: relative;
+  background: rgba(96, 96, 96, 0.5411764706);
+  width: 60vh;
+  height: 100%;
+}
+.Contact .leftPart .bigPhoto .littlePhoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: -20px;
+  top: 20%;
+  background-color: #f9f6f3;
+  width: 60%;
+  height: 60%;
+}
+.Contact .leftPart .bigPhoto .littlePhoto .photo {
+  width: 80%;
+  height: 80%;
+  background-color: rgba(96, 96, 96, 0.5411764706);
+  position: relative;
+}
+.Contact .rightPart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 100vh;
+}
+.Contact .rightPart form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.Contact .rightPart form label {
+  font-style: italic;
+}
+.Contact .rightPart form button {
+  font-weight: 100;
+  border: 1px solid #c8ab7c;
+  background: none;
+  color: #c8ab7c;
+  font-size: 2.5vh;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px 30px;
+  margin: 0 auto;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+}
+.Contact .rightPart form button:hover .submit {
+  transform: translateY(-100%);
+}
+.Contact .rightPart form button .submit {
+  position: relative;
+  transition: 0.5s;
+}
+.Contact .rightPart form button .submit p:nth-child(2) {
+  position: absolute;
+  font-style: italic;
+}/*# sourceMappingURL=global.css.map */

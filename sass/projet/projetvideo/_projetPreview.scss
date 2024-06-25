@@ -1,0 +1,29 @@
+.ProjetVideoContainer {
+  .videosContainer {
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    padding: 6px 0;
+
+    .cadre {
+      height: calc(6vh + 12px);
+      width: calc(100% + 12px);
+      border: 1px solid $Gold;
+      top: 0;
+      left: -6px;
+      position: absolute;
+    }
+
+    img {
+      height: 6vh;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "category": "Graphisme",
+    "year": "2024",
+    "description": "Photoshop / Illustrator / InDesign",
+    "images": [
+      {
+        "image": "https://images.unsplash.com/photo-1717501219687-ddce079f704b?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": "wide"
+      },
+      {
+        "image": "https://plus.unsplash.com/premium_photo-1675237625141-0bfadb4d6836?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1683565729190-45524927f64d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": "tall"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1717501219687-ddce079f704b?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://plus.unsplash.com/premium_photo-1675237625141-0bfadb4d6836?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://plus.unsplash.com/premium_photo-1675237625141-0bfadb4d6836?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": "big"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1683565729190-45524927f64d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1717501219687-ddce079f704b?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://plus.unsplash.com/premium_photo-1675237625141-0bfadb4d6836?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": "big"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1683565729190-45524927f64d?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1717501219687-ddce079f704b?q=80&w=3432&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://plus.unsplash.com/premium_photo-1675237625141-0bfadb4d6836?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "class": ""
+      },
+      {
+        "image": "https://images.ctfassets.net/4cd45et68cgf/4nBnsuPq03diC5eHXnQYx/d48a4664cdc48b6065b0be2d0c7bc388/Netflix-Logo.jpg",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "category": "Montage",
+    "year": "2024",
+    "description": "Premiere Pro / After Effects",
+    "videos": [
+      "https://www.rollingstone.fr/wp-content/uploads/2021/02/netflix.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg"
+    ]
+  },
+  {
+    "category": "Animations",
+    "year": "2024",
+    "description": "After Effects",
+    "videos": [
+      "https://image.api.playstation.com/vulcan/ap/rnd/202107/1612/Y5RHNmzAtc6sRYwZlYiKHAxN.png",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg",
+      "https://www.photographe-elisabeth-mazet.com/wp-content/uploads/2020/03/1136_gettyimages-108161282.jpg"
+    ]
+  }
+]

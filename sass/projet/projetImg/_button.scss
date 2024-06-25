@@ -1,0 +1,42 @@
+.ProjetImgContainer {
+  button {
+    position: absolute;
+    font-size: 3vh;
+    font-style: italic;
+    z-index: 5;
+    bottom: 30%;
+    left: -116px;
+    background: none;
+    border: none;
+    color: $DarkGold;
+    cursor: pointer;
+    outline: none;
+
+    &:hover::after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    &:nth-child(even) {
+      bottom: 63%;
+      left: 106%;
+
+      &::after {
+        height: 0.5px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      background-color: $DarkGold;
+      transition: transform 0.5s;
+      transform-origin: right;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.numberContainer {
+  position: absolute;
+  font-size: 10vh;
+  color: $DarkGold;
+  top: -45px;
+  left: -120px;
+  display: flex;
+
+  .nums1 {
+    text-align: end;
+  }
+  .nums1,
+  .nums2 {
+    font-style: italic;
+    height: 12vh;
+    overflow: hidden;
+    .transition {
+      transition: 0.5s;
+    }
+  }
+}

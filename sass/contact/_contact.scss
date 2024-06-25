@@ -1,0 +1,145 @@
+.Contact {
+  height: 100vh;
+  padding: 100px 50px;
+  display: flex;
+  background-color: $BackGround;
+  color: $Gold;
+
+  h1 {
+    line-height: 0.7;
+    margin-bottom: 60px;
+    font-size: 13vh;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: $Gold;
+  }
+
+  label {
+    font-size: 5vh;
+  }
+  textarea {
+    flex-grow: 1;
+  }
+
+  .message {
+    position: absolute;
+    top: -30px;
+    left: 0;
+  }
+
+  .message,
+  input,
+  textarea {
+    font-size: 2vh;
+    font-family: "Lexend Deca";
+    font-weight: 200;
+  }
+
+  input,
+  textarea {
+    position: relative;
+    color: $Gold;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid $LightGold;
+    transition: border-bottom 0.5s;
+    resize: none;
+    margin-bottom: 25px;
+    padding: 10px 0;
+
+    &:focus {
+      border-bottom: 2px solid $Gold;
+    }
+  }
+
+  .leftPart {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bigPhoto {
+      position: relative;
+      background: $Grey;
+      width: 60vh;
+      height: 100%;
+
+      .littlePhoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: -20px;
+        top: 20%;
+        background-color: $BackGround;
+        width: 60%;
+        height: 60%;
+
+        .photo {
+          width: 80%;
+          height: 80%;
+          background-color: $Grey;
+          position: relative;
+        }
+      }
+    }
+  }
+  .rightPart {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 100vh;
+
+    form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+
+      label {
+        font-style: italic;
+      }
+
+      button {
+        font-weight: 100;
+        border: 1px solid $Gold;
+        background: none;
+        color: $Gold;
+        font-size: 2.5vh;
+        width: fit-content;
+        padding: 3px 30px;
+        margin: 0 auto;
+        transition: 0.5s;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover .submit {
+          transform: translateY(-100%);
+        }
+
+        .submit {
+          position: relative;
+          transition: 0.5s;
+          p:nth-child(2) {
+            position: absolute;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
