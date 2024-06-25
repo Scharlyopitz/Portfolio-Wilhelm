@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Numbers from "./Numbers";
 import Button from "./Button";
 import BackBtn from "@/components/BackBtn";
+import { motion as m } from "framer-motion";
 
 export default function ProjetImg({ item }) {
   const [imageTarget, setImageTarget] = useState(0);
@@ -49,7 +50,7 @@ export default function ProjetImg({ item }) {
 
       {item.images.map((img, i) => {
         return (
-          <img
+          <m.img
             style={{ zIndex: imageTarget == i && 1 }}
             key={i}
             src={img.image}
