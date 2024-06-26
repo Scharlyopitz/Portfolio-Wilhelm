@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Button({
+  setDirection,
   setImageTarget,
   imageTarget,
   setTranslateColums2,
@@ -11,7 +12,8 @@ export default function Button({
   function handleClick(e) {
     const i = e.target.dataset.i;
 
-    setImageTarget(i == 0 ? imageTarget - 1 : imageTarget + 1),
+    setDirection(i == 0 ? -1 : 1),
+      setImageTarget(i == 0 ? imageTarget - 1 : imageTarget + 1),
       setTranslateColums2(i == 0 ? translateColums2 - 1 : translateColums2 + 1);
   }
 

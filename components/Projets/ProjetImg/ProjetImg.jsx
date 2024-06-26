@@ -4,7 +4,6 @@ import Button from "./Button";
 import BackBtn from "@/components/BackBtn";
 import { AnimatePresence, motion as m } from "framer-motion";
 import {
-  imageTransition,
   anime,
   easeOutQuint,
 } from "@/components/Animations/ProjetImg/animations";
@@ -19,6 +18,32 @@ export default function ProjetImg({ item }) {
 
   const [translateColums1, setTranslateColums1] = useState(0);
   const [translateColums2, setTranslateColums2] = useState(1);
+
+  const [direction, setDirection] = useState(0);
+
+  const imageTransition = {
+    initial: (direction) => ({
+      // y: direction > 0 ? "100%" : "-100%",
+      objectPosition: direction > 0 ? "center 0%" : "center 100%",
+      clipPath:
+        direction > 0
+          ? "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)"
+          : "polygon(0 0, 100% 0, 100% 0, 0 0)",
+    }),
+    animate: {
+      // y: 0,
+      objectPosition: "center 50%",
+      clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    },
+    exit: (direction) => ({
+      // y: direction > 0 ? "-100%" : "100%",
+      objectPosition: direction > 0 ? "center 100%" : "center 0%",
+      clipPath:
+        direction > 0
+          ? "polygon(0 0, 100% 0, 100% 0, 0 0)"
+          : "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
+    }),
+  };
 
   useEffect(() => {
     if (translateColums2 == nums2.length) {
@@ -53,19 +78,23 @@ export default function ProjetImg({ item }) {
         translateColums2={translateColums2}
       />
 
-      <AnimatePresence initial={false}>
-        <m.img
-          key={imageTarget + 2}
-          {...anime(imageTransition)}
-          transition={{ duration: 0.8, ease: easeOutQuint }}
-          src={item.images[imageTarget]?.image}
-          alt={`image ${imageTarget + 1}`}
-        />
-      </AnimatePresence>
+      <div className="img">
+        <AnimatePresence initial={false} mode="popLayout" custom={direction}>
+          <m.img
+            key={imageTarget}
+            custom={direction}
+            {...anime(imageTransition)}
+            transition={{ duration: 0.8, ease: easeOutQuint }}
+            src={item.images[imageTarget]?.image}
+            alt={`image ${imageTarget + 1}`}
+          />
+        </AnimatePresence>
+      </div>
 
       <div className="MaxNumber">/{item.images.length} </div>
       <BackBtn />
       <Button
+        setDirection={setDirection}
         imageTarget={imageTarget}
         setImageTarget={setImageTarget}
         translateColums2={translateColums2}
