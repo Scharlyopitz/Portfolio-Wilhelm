@@ -6,6 +6,7 @@ import { AnimatePresence, motion as m } from "framer-motion";
 import {
   imageTransition,
   anime,
+  easeOutQuint,
 } from "@/components/Animations/ProjetImg/animations";
 
 export default function ProjetImg({ item }) {
@@ -18,22 +19,6 @@ export default function ProjetImg({ item }) {
 
   const [translateColums1, setTranslateColums1] = useState(0);
   const [translateColums2, setTranslateColums2] = useState(1);
-
-  const initialPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
-  const leftPath = "polygon(0 0, 0 0, 0 100%, 0% 100%)";
-  const rightPath = "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)";
-
-  const imagess = {
-    initial: {
-      clipPath: rightPath,
-    },
-    animate: {
-      clipPath: initialPath,
-    },
-    exit: {
-      clipPath: leftPath,
-    },
-  };
 
   useEffect(() => {
     if (translateColums2 == nums2.length) {
@@ -71,8 +56,8 @@ export default function ProjetImg({ item }) {
       <AnimatePresence initial={false}>
         <m.img
           key={imageTarget + 2}
-          {...anime(imagess)}
-          transition={{ duration: 0.5, ease: [0.56, 0.03, 0.12, 1.04] }}
+          {...anime(imageTransition)}
+          transition={{ duration: 0.8, ease: easeOutQuint }}
           src={item.images[imageTarget]?.image}
           alt={`image ${imageTarget + 1}`}
         />
