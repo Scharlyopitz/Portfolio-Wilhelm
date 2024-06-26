@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import Numbers from "./Numbers";
 import Button from "./Button";
 import BackBtn from "@/components/BackBtn";
-import { motion as m } from "framer-motion";
+import { AnimatePresence, motion as m } from "framer-motion";
+import {
+  imageTransition,
+  anime,
+} from "@/components/Animations/ProjetImg/animations";
 
 export default function ProjetImg({ item }) {
   const [imageTarget, setImageTarget] = useState(0);
@@ -14,6 +18,22 @@ export default function ProjetImg({ item }) {
 
   const [translateColums1, setTranslateColums1] = useState(0);
   const [translateColums2, setTranslateColums2] = useState(1);
+
+  const initialPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
+  const leftPath = "polygon(0 0, 0 0, 0 100%, 0% 100%)";
+  const rightPath = "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)";
+
+  const imagess = {
+    initial: {
+      clipPath: rightPath,
+    },
+    animate: {
+      clipPath: initialPath,
+    },
+    exit: {
+      clipPath: leftPath,
+    },
+  };
 
   useEffect(() => {
     if (translateColums2 == nums2.length) {
@@ -48,16 +68,16 @@ export default function ProjetImg({ item }) {
         translateColums2={translateColums2}
       />
 
-      {item.images.map((img, i) => {
-        return (
-          <m.img
-            style={{ zIndex: imageTarget == i && 1 }}
-            key={i}
-            src={img.image}
-            alt={`image${i}`}
-          />
-        );
-      })}
+      <AnimatePresence initial={false}>
+        <m.img
+          key={imageTarget + 2}
+          {...anime(imagess)}
+          transition={{ duration: 0.5, ease: [0.56, 0.03, 0.12, 1.04] }}
+          src={item.images[imageTarget]?.image}
+          alt={`image ${imageTarget + 1}`}
+        />
+      </AnimatePresence>
+
       <div className="MaxNumber">/{item.images.length} </div>
       <BackBtn />
       <Button
