@@ -339,7 +339,7 @@ main {
 .ProjetPreview {
   position: fixed;
   left: 50px;
-  top: 50%;
+  top: 47vh;
 }
 .ProjetPreview .cadre {
   z-index: 1;
