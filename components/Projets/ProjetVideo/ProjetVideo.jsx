@@ -1,7 +1,6 @@
 import ProjetPreview from "./ProjetPreview";
 import { motion as m } from "framer-motion";
 import BackBtn from "@/components/BackBtn";
-import { useState } from "react";
 
 export default function ProjetVideo({ item }) {
   return (

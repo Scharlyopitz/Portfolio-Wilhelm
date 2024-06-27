@@ -7,11 +7,11 @@ export default function ProjetPreview({ item }) {
   const [containerHeight, setContainerHeight] = useState();
   const [cadreHeight, setCadreHeight] = useState();
 
-  const mooveCadre = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [0, containerHeight - cadreHeight - 1]
-  );
+  // const mooveCadre = useTransform(
+  //   scrollYProgress,
+  //   [0, 1],
+  //   [0, containerHeight - cadreHeight - 1]
+  // );
 
   const mooveImages = useTransform(
     scrollYProgress,
