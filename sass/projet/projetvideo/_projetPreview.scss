@@ -1,58 +1,31 @@
-// .ProjetVideoContainer {
-//   .videosContainer {
-//     position: fixed;
-//     top: 50%;
-//     left: 50px;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     padding: 6px 0;
-//     gap: 20px;
-
-//     .cadre {
-//       height: calc(6vh + 12px);
-//       width: calc(100% + 12px);
-//       border: 1px solid $Gold;
-//       top: 0;
-//       left: -6px;
-//       position: absolute;
-//     }
-
-//     img {
-//       width: 11.5vh;
-//       height: 6vh;
-//       object-fit: cover;
-//       object-position: center;
-//       pointer-events: none;
-//     }
-//   }
-// }
-
-.cadre {
-  z-index: 1;
+.ProjetPreview {
   position: fixed;
   left: 50px;
   top: 50%;
-  height: calc(6vh + 12px);
-  width: calc(11.5vh + 12px);
-  border: 1px solid $Gold;
-}
 
-.videosContainer {
-  position: fixed;
-  padding: 6px 0;
-  left: calc(50px + 6px);
-  top: 50%;
-  gap: 20px;
-  width: 11.5vh;
-  display: flex;
-  flex-direction: column;
+  .cadre {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -0.5vh;
+    height: calc(6vh + 1vh);
+    width: calc(100% + 1vh);
+    border: 1px solid $Gold;
+  }
 
-  img {
-    height: 6vh;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
+  .videosContainer {
+    padding: 0.5vh 0;
+    width: 11.5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+      height: 6vh;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+    }
   }
 }

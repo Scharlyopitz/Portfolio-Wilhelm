@@ -28,7 +28,7 @@ export default function ProjetPreview({ item }) {
   }, []);
 
   return (
-    <>
+    <div className="ProjetPreview">
       <div ref={cadre} className="cadre" />
 
       <m.div
@@ -40,6 +40,6 @@ export default function ProjetPreview({ item }) {
           return <img key={i} src={video} alt={`vidéo ${i + 1}`} />;
         })}
       </m.div>
-    </>
+    </div>
   );
 }

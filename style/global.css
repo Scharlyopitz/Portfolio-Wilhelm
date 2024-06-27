@@ -336,27 +336,28 @@ main {
   background-color: #39548b;
 }
 
-.cadre {
-  z-index: 1;
+.ProjetPreview {
   position: fixed;
   left: 50px;
   top: 50%;
-  height: calc(6vh + 12px);
-  width: calc(11.5vh + 12px);
+}
+.ProjetPreview .cadre {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: -0.5vh;
+  height: 7vh;
+  width: calc(100% + 1vh);
   border: 1px solid #c8ab7c;
 }
-
-.videosContainer {
-  position: fixed;
-  padding: 6px 0;
-  left: 56px;
-  top: 50%;
-  gap: 20px;
+.ProjetPreview .videosContainer {
+  padding: 0.5vh 0;
   width: 11.5vh;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
-.videosContainer img {
+.ProjetPreview .videosContainer img {
   height: 6vh;
   width: 100%;
   -o-object-fit: cover;
