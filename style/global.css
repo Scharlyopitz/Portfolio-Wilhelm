@@ -336,28 +336,29 @@ main {
   background-color: #39548b;
 }
 
-.ProjetVideoContainer .videosContainer {
+.cadre {
+  z-index: 1;
   position: fixed;
-  top: 50%;
   left: 50px;
-  transform: translateY(-50%);
+  top: 50%;
+  height: calc(6vh + 12px);
+  width: calc(11.5vh + 12px);
+  border: 1px solid #c8ab7c;
+}
+
+.videosContainer {
+  position: fixed;
+  padding: 6px 0;
+  left: 56px;
+  top: 50%;
+  gap: 20px;
+  width: 11.5vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 65vh;
-  padding: 6px 0;
 }
-.ProjetVideoContainer .videosContainer .cadre {
-  height: calc(6vh + 12px);
-  width: calc(100% + 12px);
-  border: 1px solid #c8ab7c;
-  top: 0;
-  left: -6px;
-  position: absolute;
-}
-.ProjetVideoContainer .videosContainer img {
-  width: 11.5vh;
+.videosContainer img {
   height: 6vh;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

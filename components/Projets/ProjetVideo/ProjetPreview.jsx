@@ -1,4 +1,4 @@
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion as m } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function ProjetPreview({ item }) {
@@ -13,6 +13,12 @@ export default function ProjetPreview({ item }) {
     [0, containerHeight - cadreHeight - 1]
   );
 
+  const mooveImages = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [0, -containerHeight + cadreHeight + 2]
+  );
+
   const container = useRef(null);
   const cadre = useRef(null);
 
@@ -22,19 +28,18 @@ export default function ProjetPreview({ item }) {
   }, []);
 
   return (
-    <div ref={container} className="videosContainer">
-      <motion.div
-        ref={cadre}
-        // drag="y"
-        // dragConstraints={container}
-        // dragElastic={0}
-        // dragMomentum={false}
-        style={{ y: mooveCadre }}
-        className="cadre"
-      />
-      {item.videos.map((video, i) => {
-        return <img key={i} src={video} alt={`vidéo ${i + 1}`} />;
-      })}
-    </div>
+    <>
+      <div ref={cadre} className="cadre" />
+
+      <m.div
+        ref={container}
+        style={{ y: mooveImages }}
+        className="videosContainer"
+      >
+        {item.videos.map((video, i) => {
+          return <img key={i} src={video} alt={`vidéo ${i + 1}`} />;
+        })}
+      </m.div>
+    </>
   );
 }
