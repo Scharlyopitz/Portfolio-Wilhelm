@@ -84,7 +84,7 @@ export default function ProjetImg({ item }) {
             key={imageTarget}
             custom={direction}
             {...anime(imageTransition)}
-            transition={{ duration: 0.8, ease: easeOutQuint }}
+            transition={{ duration: 1.2, ease: easeOutQuint }}
             src={item.images[imageTarget]?.image}
             alt={`image ${imageTarget + 1}`}
           />
