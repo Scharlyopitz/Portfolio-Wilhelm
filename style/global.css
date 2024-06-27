@@ -325,15 +325,15 @@ main {
 .ProjetVideo .bigVideos img:last-child {
   margin-bottom: 25vh;
 }
-.ProjetVideo .ProjectNumbers {
-  position: fixed;
-  color: #ff9b78;
-  mix-blend-mode: difference;
-}
 .ProjetVideo .backBtn {
   position: fixed;
   top: 60px;
   left: 75px;
+  mix-blend-mode: difference;
+  color: #39548b;
+}
+.ProjetVideo .backBtn::after {
+  background-color: #39548b;
 }
 
 .ProjetVideoContainer .videosContainer {

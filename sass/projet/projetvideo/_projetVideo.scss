@@ -52,15 +52,15 @@
     }
   }
 
-  .ProjectNumbers {
-    position: fixed;
-    color: #ff9b78;
-    mix-blend-mode: difference;
-  }
-
   .backBtn {
     position: fixed;
     top: 60px;
     left: 75px;
+    mix-blend-mode: difference;
+    color: #39548b;
+
+    &::after {
+      background-color: #39548b;
+    }
   }
 }
