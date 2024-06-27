@@ -92,8 +92,8 @@ main {
   font-style: italic;
   color: #c8ab7c;
   position: absolute;
-  top: 17px;
-  right: 77px;
+  top: 6%;
+  right: 6%;
   border: none;
   background: none;
   font-size: 3vh;
@@ -193,8 +193,8 @@ main {
   position: absolute;
   font-size: 10vh;
   color: #ba9b60;
-  bottom: -10px;
-  right: -130px;
+  bottom: -1.5%;
+  right: -20%;
 }
 .ProjetImgContainer .img {
   position: absolute;
@@ -213,7 +213,7 @@ main {
 }
 .ProjetImg .backBtn {
   top: 25%;
-  left: -180px;
+  left: -39%;
 }
 
 .ProjetImgContainer button {
@@ -222,7 +222,7 @@ main {
   font-style: italic;
   z-index: 5;
   bottom: 30%;
-  left: -116px;
+  left: -20%;
   background: none;
   border: none;
   color: #ba9b60;
@@ -257,8 +257,8 @@ main {
   position: absolute;
   font-size: 10vh;
   color: #ba9b60;
-  top: -45px;
-  left: -120px;
+  top: -5.5%;
+  left: -18%;
   display: flex;
 }
 .numberContainer .nums1 {
@@ -338,14 +338,14 @@ main {
 
 .ProjetPreview {
   position: fixed;
-  left: 50px;
+  right: 50px;
   top: 47vh;
 }
 .ProjetPreview .cadre {
   z-index: 1;
   position: absolute;
   top: 0;
-  left: -0.5vh;
+  right: -0.5vh;
   height: 7vh;
   width: calc(100% + 1vh);
   border: 1px solid #c8ab7c;
@@ -355,7 +355,7 @@ main {
   width: 11.5vh;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2.5vh;
 }
 .ProjetPreview .videosContainer img {
   height: 6vh;
@@ -377,7 +377,7 @@ main {
 .Contact h1 {
   line-height: 0.7;
   margin-bottom: 60px;
-  font-size: 13vh;
+  font-size: 10vh;
   font-weight: 100;
   text-transform: uppercase;
 }

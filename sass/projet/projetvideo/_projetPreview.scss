@@ -1,13 +1,13 @@
 .ProjetPreview {
   position: fixed;
-  left: 50px;
+  right: 50px;
   top: 47vh;
 
   .cadre {
     z-index: 1;
     position: absolute;
     top: 0;
-    left: -0.5vh;
+    right: -0.5vh;
     height: calc(6vh + 1vh);
     width: calc(100% + 1vh);
     border: 1px solid $Gold;
@@ -18,7 +18,7 @@
     width: 11.5vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 2.5vh;
 
     img {
       height: 6vh;
