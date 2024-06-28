@@ -308,22 +308,27 @@ main {
 .ProjetVideo .bigVideos {
   position: absolute;
   display: flex;
-  top: 25%;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   flex-direction: column;
 }
-.ProjetVideo .bigVideos img {
+.ProjetVideo .bigVideos div {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90vh;
+  height: 100vh;
+}
+.ProjetVideo .bigVideos div img {
+  width: 100%;
   height: 50vh;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  margin-bottom: 50vh;
-}
-.ProjetVideo .bigVideos img:last-child {
-  margin-bottom: 25vh;
 }
 .ProjetVideo .backBtn {
   position: fixed;

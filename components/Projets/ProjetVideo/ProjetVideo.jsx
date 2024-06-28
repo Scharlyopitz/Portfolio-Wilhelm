@@ -1,24 +1,40 @@
 import ProjetPreview from "./ProjetPreview";
-import { motion as m } from "framer-motion";
+import { useScroll } from "framer-motion";
 import BackBtn from "@/components/BackBtn";
+import Videos from "./Videos";
+import { useRef } from "react";
 
 export default function ProjetVideo({ item }) {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end end"],
+  });
+
   return (
     <div className="ProjetVideoContainer">
       <div className="bg" />
       <BackBtn />
       <ProjetPreview item={item} />
-      <div className="bigVideos">
+      <div ref={container} className="bigVideos">
         {item.videos.map((video, i) => {
+          const targetScale = 1 - (item.videos.length - i) * 0.05;
+
+          const pourcentage = -25;
+
+          const targetY = item.videos.length - i - 1;
+          // console.log(i * (1 / item.videos.length));
+          console.log(targetY / pourcentage);
+
           return (
-            <m.img
+            <Videos
               key={i}
-              style={{ filter: "grayscale(1)" }}
-              whileInView={{ filter: "grayscale(0)" }}
-              viewport={{ amount: 0.5 }}
-              transition={{ duration: 1 }}
-              src={video}
-              alt={`video ${i + 1}`}
+              video={video}
+              i={i}
+              range={[i * (1 / item.videos.length), 1]}
+              targetY={`${targetY * pourcentage}%`}
+              progress={scrollYProgress}
+              targetScale={targetScale}
             />
           );
         })}

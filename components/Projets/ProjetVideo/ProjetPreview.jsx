@@ -1,4 +1,4 @@
-import { useScroll, useTransform, motion as m } from "framer-motion";
+import { useTransform, motion as m, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function ProjetPreview({ item }) {
