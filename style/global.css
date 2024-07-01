@@ -216,6 +216,14 @@ main {
   left: -39%;
 }
 
+@media screen and (max-width: 1950px) {
+  .ProjetImg .ProjetTitlImg {
+    width: 95vw;
+  }
+  .ProjetImg h1 {
+    font-size: 10vw;
+  }
+}
 .ProjetImgContainer button {
   position: absolute;
   font-size: 3vh;
