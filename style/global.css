@@ -224,6 +224,15 @@ main {
     font-size: 10vw;
   }
 }
+@media screen and (max-width: 1650px) {
+  .ProjetImgContainer {
+    width: 42vw;
+    height: 55.8vw;
+  }
+  .ProjetImg .MaxNumber {
+    font-size: 8vw;
+  }
+}
 .ProjetImgContainer button {
   position: absolute;
   font-size: 3vh;
@@ -261,6 +270,12 @@ main {
   transform-origin: right;
 }
 
+@media (max-width: 1650px) {
+  .ProjetImgContainer button,
+  .ProjetImgContainer .backBtn {
+    font-size: 2vw;
+  }
+}
 .numberContainer {
   position: absolute;
   font-size: 10vh;
@@ -283,6 +298,15 @@ main {
   transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+@media (max-width: 1650px) {
+  .numberContainer {
+    font-size: 8vw;
+  }
+  .numberContainer .nums1,
+  .numberContainer .nums2 {
+    height: 9vw;
+  }
+}
 .ProjetVideo {
   display: flex;
   align-items: center;

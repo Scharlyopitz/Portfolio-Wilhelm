@@ -19,3 +19,13 @@
     }
   }
 }
+
+@media (max-width: 1650px) {
+  .numberContainer {
+    font-size: 8vw;
+    .nums1,
+    .nums2 {
+      height: 9vw;
+    }
+  }
+}
