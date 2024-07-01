@@ -15,7 +15,6 @@ export default function Videos({ video, i }) {
 
   const clipath1 = useTransform(scrollYProgress, [0.25, 1], [50, 100]);
   const clipath2 = useTransform(scrollYProgress, [0.25, 1], [50, 0]);
-
   const clipPath = useMotionTemplate`polygon(${clipath2}% ${clipath2}%, ${clipath1}% ${clipath2}%, ${clipath1}% ${clipath1}%, ${clipath2}% ${clipath1}%)`;
 
   const rotate = useTransform(scrollYProgress, [0.25, 1], ["-25deg", "0deg"]);
