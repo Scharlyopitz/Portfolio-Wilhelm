@@ -339,22 +339,29 @@ main {
 }
 .ProjetVideo .bigVideos {
   position: absolute;
-  display: flex;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 .ProjetVideo .bigVideos div {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 90vh;
   height: 100vh;
+  width: 20%;
 }
-.ProjetVideo .bigVideos div img {
-  width: 100%;
+.ProjetVideo .bigVideos div .imgContain {
+  position: fixed;
+  top: 25vh;
+  width: 90vh;
   height: 50vh;
+}
+.ProjetVideo .bigVideos div .imgContain img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;

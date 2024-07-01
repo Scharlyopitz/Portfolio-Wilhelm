@@ -18,18 +18,7 @@ export default function ProjetVideo({ item }) {
       <ProjetPreview item={item} />
       <div ref={container} className="bigVideos">
         {item.videos.map((video, i) => {
-          const targetScale = 1 - (item.videos.length - i) * 0.05;
-
-          return (
-            <Videos
-              key={i}
-              video={video}
-              i={i}
-              range={[i * (1 / item.videos.length), 1]}
-              progress={scrollYProgress}
-              targetScale={targetScale}
-            />
-          );
+          return <Videos key={i} video={video} i={i} />;
         })}
       </div>
     </div>

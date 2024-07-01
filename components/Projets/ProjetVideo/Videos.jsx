@@ -6,30 +6,31 @@ import {
 } from "framer-motion";
 import React, { useRef } from "react";
 
-export default function Videos({ video, i, progress, range, targetScale }) {
+export default function Videos({ video, i }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
-    // target: container,
-    // offset: ["start end", "start start"],
+    target: container,
+    offset: ["start end", "start start"],
   });
 
-  const clipath1 = useTransform(scrollYProgress, [0, 1], [50, 100]);
-  const clipath2 = useTransform(scrollYProgress, [0, 1], [50, 0]);
+  const clipath1 = useTransform(scrollYProgress, [0.25, 1], [50, 100]);
+  const clipath2 = useTransform(scrollYProgress, [0.25, 1], [50, 0]);
 
   const clipPath = useMotionTemplate`polygon(${clipath2}% ${clipath2}%, ${clipath1}% ${clipath2}%, ${clipath1}% ${clipath1}%, ${clipath2}% ${clipath1}%)`;
 
-  const rotate = useTransform(scrollYProgress, [0, 1], ["-25deg", "0deg"]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 0.5]);
-  // const scaleImg = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  // const rotateImg = useTransform(scrollYProgress, [0, 1], ["-25deg", "0deg"]);
-  // const roImg = useTransform(scrollYProgress, [0, 1], ["25deg", "0deg"]);
-  // const scale = useTransform(scrollYProgress, [0, 1], [1.5, 1]);
-  // const scaleDown = useTransform(progress, range, [1, targetScale]);
-  // const top = useTransform(progress, range, [0, 1]);
+  const rotate = useTransform(scrollYProgress, [0.25, 1], ["-25deg", "0deg"]);
+  const imgRotate = useTransform(scrollYProgress, [0.25, 1], ["25deg", "0deg"]);
+  const scale = useTransform(scrollYProgress, [0.25, 1], [2, 1]);
 
   return (
     <m.div ref={container}>
-      <m.img src={video} alt={`video ${i + 1}`} />
+      <m.div style={{ clipPath, rotate }} className="imgContain">
+        <m.img
+          style={{ rotate: imgRotate, scale }}
+          src={video}
+          alt={`video ${i + 1}`}
+        />
+      </m.div>
     </m.div>
   );
 }
