@@ -334,11 +334,10 @@ main {
   position: fixed;
   top: 60px;
   left: 75px;
-  mix-blend-mode: difference;
-  color: #39548b;
+  color: #ba9b60;
 }
 .ProjetVideo .backBtn::after {
-  background-color: #39548b;
+  background-color: #ba9b60;
 }
 
 .ProjetPreview {

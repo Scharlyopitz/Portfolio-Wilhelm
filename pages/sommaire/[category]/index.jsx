@@ -29,7 +29,10 @@ export default function Projet() {
         </main>
       )}
       {item.videos && (
-        <main className="ProjetVideo">
+        <main
+          style={{ height: `${item.videos.length * 100}vh` }}
+          className="ProjetVideo"
+        >
           <div className="bg" />
           <div className="ProjetTitlVideo">
             {categoryName.split("").map((l, i) => {

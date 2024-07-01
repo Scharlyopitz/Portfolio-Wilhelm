@@ -20,19 +20,12 @@ export default function ProjetVideo({ item }) {
         {item.videos.map((video, i) => {
           const targetScale = 1 - (item.videos.length - i) * 0.05;
 
-          const pourcentage = -25;
-
-          const targetY = item.videos.length - i - 1;
-          // console.log(i * (1 / item.videos.length));
-          console.log(targetY / pourcentage);
-
           return (
             <Videos
               key={i}
               video={video}
               i={i}
               range={[i * (1 / item.videos.length), 1]}
-              targetY={`${targetY * pourcentage}%`}
               progress={scrollYProgress}
               targetScale={targetScale}
             />

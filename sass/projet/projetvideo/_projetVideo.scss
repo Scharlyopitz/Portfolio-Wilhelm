@@ -64,11 +64,10 @@
     position: fixed;
     top: 60px;
     left: 75px;
-    mix-blend-mode: difference;
-    color: #39548b;
+    color: $DarkGold;
 
     &::after {
-      background-color: #39548b;
+      background-color: $DarkGold;
     }
   }
 }
