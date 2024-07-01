@@ -192,7 +192,7 @@ main {
   font-style: italic;
   position: absolute;
   font-size: 10vh;
-  color: #ba9b60;
+  color: #c8ab7c;
   bottom: -1.5%;
   right: -20%;
 }
@@ -264,7 +264,7 @@ main {
 .numberContainer {
   position: absolute;
   font-size: 10vh;
-  color: #ba9b60;
+  color: #c8ab7c;
   top: -5.5%;
   left: -18%;
   display: flex;
